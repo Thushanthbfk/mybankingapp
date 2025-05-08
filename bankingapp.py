@@ -301,21 +301,28 @@ def mainmenu():
 
 #admin======================================================================
 def admin():
-    print("================Account details=======================")
-    with open ("accounts.txt","r") as accountread_file:
-        account_details=accountread_file.readlines()
-        print(account_details)
+    code = 30000
+    password=int(input("Enter password: "))
+    if code == password:
+        print("================Account details=======================")
+        with open ("accounts.txt","r") as accountread_file:
+            account_details=accountread_file.readlines()
+            print(account_details)
 
-    print("===================Balance Details=====================")
-    with open ("balance.txt","r") as balance_read_file:
-        balance_details=balance_read_file.readlines()
-        print(balance_details)
+        print("===================Balance Details=====================")
+        with open ("balance.txt","r") as balance_read_file:
+            balance_details=balance_read_file.readlines()
+            print(balance_details)
 
 
-    print("====================Transactions====================")
-    with open ("transactions.txt","r") as trans_file:
-        trans_details=trans_file.readlines()
-        print(trans_details)
+        print("====================Transactions====================")
+        with open ("transactions.txt","r") as trans_file:
+            trans_details=trans_file.readlines()
+            print(trans_details)
+
+    else:
+        print("Can not Enter wrong password")
+
         
 #inter face=====================================================       
 while True:
