@@ -238,7 +238,7 @@ def transaction_history():
         with open("transactions.txt", "r") as tfile:
             lines = tfile.readlines()
     except FileNotFoundError:
-        print("❌ No transaction history found.")
+        print("No transaction history found.")
         return
 
 
